@@ -4,3 +4,113 @@
     padding: 2rem;
     text-align: center;
 }
+
+.container-app {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-add-task {
+    margin-top: -2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0 8px;
+    /* display: grid;
+    grid-template-columns: 1fr 80px;
+    column-gap: 8px; */
+}
+
+.container-add-task input {
+    width: 640px;
+    padding: 1.6rem;
+    background: var(--gray-600);
+    border: 1px solid var(--gray-800);
+    border-radius: 8px;
+
+}
+
+.container-add-task button {
+    padding: 1.7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    color: var(--gray-100);
+    border-radius: 8px;
+    /* border: 1px solid transparent; */
+    border: none;
+    background-color: var(--blue-600);
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+
+.container-add-task button:hover {
+    background-color: var(--blue-400);
+}
+
+.container-add-task button:focus,
+.container-add-task button:focus-visible {
+    /* outline: 4px auto -webkit-focus-ring-color; */
+    /* outline: 3px solid var(--purple-400);  */
+    outline: none;
+    box-shadow: 2px 2px 4px 4px var(--gray-300);
+}
+
+.container-tasks {
+    margin-top: 6.4rem;
+    width: 736px;
+}
+
+.container-brief-tasks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-tasks-created,
+.container-tasks-finished {
+    display: flex;
+    align-items: center;
+    gap: 0 8px;
+}
+
+.container-brief-tasks div>span:first-of-type {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+}
+
+.container-brief-tasks div>span:last-of-type {
+    padding: 2px 8px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: var(--gray-200);
+    background-color: var(--gray-400);
+    border-radius: 999px;
+}
+
+.container-tasks-created span:first-of-type {
+    color: var(--blue-400);
+}
+
+.container-tasks-finished span:first-of-type {
+    color: var(--purple-400);
+}
+
+.container-details-tasks {
+    margin-top: 2.4rem;
+    height: 24.8rem;
+    border-top: 1px solid var(--gray-400);
+    border-radius: 8px;
+}
