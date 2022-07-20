@@ -1,7 +1,10 @@
 import "./App.module.css";
+import { Header } from "./components/Header";
 
 export function App() {
     return (
-        <div className="App"></div>
+        <div className="App">
+            <Header />
+        </div>
     );
 }
