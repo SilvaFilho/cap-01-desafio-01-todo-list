@@ -114,3 +114,44 @@
     border-top: 1px solid var(--gray-400);
     border-radius: 8px;
 }
+
+.list-tasks {
+    max-height: 408px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.task {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding: 1.6rem;
+    gap: 1.2rem;
+    background-color: var(--gray-600);
+    border: 1px solid var(--gray-400);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+}
+
+.task p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: var(--gray-100);
+}
+
+.task button {
+    all: unset;
+    cursor: pointer;
+}
+
+.task button:hover {
+    color: var(--red-400);
+}
+
+.task img:hover {
+    color: var(--red-400);
+}

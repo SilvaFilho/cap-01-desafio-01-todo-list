@@ -2,7 +2,7 @@ import styles from "./EmptyList.module.css";
 
 import iconClipboard from "../../assets/icon-clipboard.svg";
 
-export default function EmptyList() {
+export function EmptyList() {
     return (
         <div className={styles["container-emptylist"]} >
             <img src={iconClipboard} alt="ícone de lista de tarefas" />
