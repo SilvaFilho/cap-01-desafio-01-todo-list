@@ -1,3 +1,4 @@
+import { CheckCircle, PlusCircle, Trash } from "phosphor-react";
 import { Header } from "./components/Header";
 import { EmptyList } from "./components/EmptyList";
 
@@ -15,10 +16,15 @@ export function App() {
             <div className={styles["container-add-task"]} >
                 <input type="text" />
 
-                <button>
+                {/* <button>
                     Criar
 
                     <img src={iconPlus} alt="ícone para adicionar nova tarefa" />
+                </button> */}
+                <button>
+                    Criar
+
+                    <PlusCircle size={16} alt="ícone para adicionar nova tarefa" />
                 </button>
             </div>
 
@@ -37,23 +43,61 @@ export function App() {
 
                 <div className={`
                 ${styles["container-details-tasks"]}
-                ${taskList.length && styles["list-tasks"]}
+                ${taskList.length ? styles["list-tasks"] : styles["border-datails-task"]}
                 `} >
                     {/* {!taskList.length && <EmptyList /> } */}
                     {
                         taskList.length ?
-                            <div className={styles.task} >
-                                <input type="checkbox" name="" id="" />
+                            <>
+                                <div className={styles.task} >
+                                    {/* <label className="container-checkbox">
+                                        <input type="checkbox" />
+                                        <span className="checkmark"></span>
+                                    </label> */}
+                                    {/* <button onClick={() => console.log("Clicou.")} >
+                                        <CheckCircle size={20} weight="regular" color="var(--blue-400)" />
+                                    </button> */}
+                                    <div className={styles["container-checkbox"]}>
+                                        <input type="checkbox" name="task-done" id="checked-task-01" />
+                                        <label htmlFor="checked-task-01" ></label>
+                                    </div>
 
-                                <p>
-                                    Integer urna interdum massa libero auctor neque turpis turpis semper. 
-                                    Duis vel sed fames integer.
-                                </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Praesentium fugit id reiciendis suscipit si perferendis corporis,
+                                        excepturi sit ab quibusdam recusandae vero harum quos
+                                        quo cumque ut est minus?
+                                        Consectetur, suscipit autem.
+                                    </p>
 
-                                <button type="button" >
-                                    <img src={iconDelete} alt="ícone de apagar tarefa" />
-                                </button>
-                            </div> :
+                                    {/* <button type="button" title="Apagar tarefa" >
+                                        <img src={iconDelete} alt="ícone de apagar tarefa" />
+                                    </button> */}
+                                    <button type="button" title="Apagar tarefa" className="delete" >
+                                        <Trash size={18} alt="ícone de apagar tarefa" />
+                                    </button>
+                                </div>
+
+                                <div className={styles.task} >
+                                    {/* <input type="checkbox" name="" id="" /> */}
+                                    <div className={styles["container-checkbox"]}>
+                                        <input type="checkbox" name="task-done" id="checked-task-02" />
+                                        <label htmlFor="checked-task-02" ></label>
+                                    </div>
+
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Praesentium fugit id reiciendis perferendis corporis,
+                                        excepturi sit ab quibusdam recusandae vero harum quos
+                                        quo cumque ut est minus?
+                                        Consectetur, suscipit autem.
+                                    </p>
+
+                                    <button type="button" title="Apagar tarefa" >
+                                        <Trash size={18} alt="ícone de apagar tarefa" />
+                                    </button>
+                                </div>
+                            </> :
                             <EmptyList />
                     }
                 </div>
